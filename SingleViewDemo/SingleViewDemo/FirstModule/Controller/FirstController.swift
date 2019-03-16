@@ -1,0 +1,29 @@
+//
+//  FirstController.swift
+//  SingleViewDemo
+//
+//  Created by Dariy Kordiyak on 3/16/19.
+//  Copyright © 2019 Dariy Kordiyak. All rights reserved.
+//
+
+import Foundation
+
+class FirstController {
+    
+    // MARK: - Properties
+    
+    private let coordinator: FirstCoordinator
+    
+    // MARK: - Initialization
+    
+    init(coordinator: FirstCoordinator) {
+        self.coordinator = coordinator
+    }
+    
+    // MARK: - Actions
+    
+    func didTapOnActionButton() {
+        coordinator.didTapButton()
+    }
+    
+}
