@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471D96F82249233D0069C493 /* ThirdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D96F72249233D0069C493 /* ThirdCoordinator.swift */; };
+		471D96FD2249242F0069C493 /* ThirdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D96FC2249242F0069C493 /* ThirdModel.swift */; };
+		471D96FF224924420069C493 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D96FE224924420069C493 /* ThirdView.swift */; };
+		471D9701224924730069C493 /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D9700224924730069C493 /* ThirdController.swift */; };
 		4749298D223D178D00DB7CBA /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749298C223D178D00DB7CBA /* FirstView.swift */; };
 		4749298F223D179C00DB7CBA /* FirstModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749298E223D179C00DB7CBA /* FirstModel.swift */; };
 		47492991223D17B000DB7CBA /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47492990223D17B000DB7CBA /* FirstController.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		471D96F72249233D0069C493 /* ThirdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCoordinator.swift; sourceTree = "<group>"; };
+		471D96FC2249242F0069C493 /* ThirdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdModel.swift; sourceTree = "<group>"; };
+		471D96FE224924420069C493 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
+		471D9700224924730069C493 /* ThirdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdController.swift; sourceTree = "<group>"; };
 		4749298C223D178D00DB7CBA /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		4749298E223D179C00DB7CBA /* FirstModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstModel.swift; sourceTree = "<group>"; };
 		47492990223D17B000DB7CBA /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
@@ -51,6 +59,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		471D96F6224923230069C493 /* ThirdModule */ = {
+			isa = PBXGroup;
+			children = (
+				471D96F72249233D0069C493 /* ThirdCoordinator.swift */,
+				471D96FB2249235C0069C493 /* Controller */,
+				471D96FA224923480069C493 /* View */,
+				471D96F9224923410069C493 /* Model */,
+			);
+			path = ThirdModule;
+			sourceTree = "<group>";
+		};
+		471D96F9224923410069C493 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				471D96FC2249242F0069C493 /* ThirdModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		471D96FA224923480069C493 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				471D96FE224924420069C493 /* ThirdView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		471D96FB2249235C0069C493 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				471D9700224924730069C493 /* ThirdController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		47492988223D174C00DB7CBA /* FirstModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +195,7 @@
 				47492996223D1B2800DB7CBA /* Interfaces */,
 				47492988223D174C00DB7CBA /* FirstModule */,
 				47492999223D1F3100DB7CBA /* SecondModule */,
+				471D96F6224923230069C493 /* ThirdModule */,
 				47D445CA223C47220048CF60 /* ContentViewController.swift */,
 				47D445CF223C47230048CF60 /* Assets.xcassets */,
 				47D445D1223C47230048CF60 /* LaunchScreen.storyboard */,
@@ -230,10 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				471D96FF224924420069C493 /* ThirdView.swift in Sources */,
+				471D9701224924730069C493 /* ThirdController.swift in Sources */,
 				4749298F223D179C00DB7CBA /* FirstModel.swift in Sources */,
 				47492995223D186100DB7CBA /* ModuleCoordinator.swift in Sources */,
 				4749299B223D1F7800DB7CBA /* SecondCoordinator.swift in Sources */,
+				471D96FD2249242F0069C493 /* ThirdModel.swift in Sources */,
 				47492993223D17DB00DB7CBA /* FirstCoordinator.swift in Sources */,
+				471D96F82249233D0069C493 /* ThirdCoordinator.swift in Sources */,
 				474929A0223D209200DB7CBA /* SecondModel.swift in Sources */,
 				47D445CB223C47220048CF60 /* ContentViewController.swift in Sources */,
 				474929A2223D209B00DB7CBA /* SecondView.swift in Sources */,

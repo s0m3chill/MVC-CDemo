@@ -35,8 +35,16 @@ class ContentViewController: UIViewController {
         viewModules.append(coordinator)
     }
     
-    private func startSecondModule() {
+    private func startSecondModule() -> ModuleCoordinator {
         let coordinator = SecondCoordinator()
+        coordinator.start(from: self)
+        
+        return coordinator
+        //viewModules.append(coordinator)
+    }
+    
+    private func startThirdModule() {
+        let coordinator = ThirdCoordinator()
         coordinator.start(from: self)
         
         viewModules.append(coordinator)
@@ -47,7 +55,10 @@ class ContentViewController: UIViewController {
     func proceedForwards(from module: ModuleCoordinator) {
         switch viewModules.count {
         case 1:
-            startSecondModule()
+            let c = startSecondModule()
+            viewModules.append(c)
+        case 2:
+            startThirdModule()
         default:
             break
         }
@@ -57,6 +68,9 @@ class ContentViewController: UIViewController {
         switch viewModules.count {
         case 2:
             startFirstModule()
+        case 3:
+            viewModules.removeLast()
+            startSecondModule()
         default:
             break
         }

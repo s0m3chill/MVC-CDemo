@@ -1,19 +1,19 @@
 //
-//  SecondView.swift
+//  ThirdView.swift
 //  SingleViewDemo
 //
-//  Created by Dariy Kordiyak on 3/16/19.
+//  Created by Dariy Kordiyak on 3/25/19.
 //  Copyright © 2019 Dariy Kordiyak. All rights reserved.
 //
 
 import UIKit
 
-class SecondView: UIView {
+class ThirdView: UIView {
     
     // MARK: - Properties
     
-    private let dataSource: SecondController
-    private let eventsHandler: SecondController
+    private let dataSource: ThirdController
+    private let eventsHandler: ThirdController
     
     private var transitionButton: UIButton = {
         let button = UIButton(type: .system)
@@ -35,8 +35,8 @@ class SecondView: UIView {
     
     // MARK: - Initialization
     
-    init(dataSource: SecondController,
-         eventsHandler: SecondController,
+    init(dataSource: ThirdController,
+         eventsHandler: ThirdController,
          frame: CGRect) {
         self.dataSource = dataSource
         self.eventsHandler = eventsHandler
@@ -53,7 +53,7 @@ class SecondView: UIView {
     // MARK: - Setup
     
     private func setupView() {
-        backgroundColor = .yellow
+        backgroundColor = .blue
         
         addSubview(transitionButton)
         transitionButton.center = center
@@ -65,7 +65,7 @@ class SecondView: UIView {
     // MARK: - Actions
     
     @objc private func buttonAction() {
-        eventsHandler.didTapButton()
+        
     }
     
     @objc private func backButtonAction() {

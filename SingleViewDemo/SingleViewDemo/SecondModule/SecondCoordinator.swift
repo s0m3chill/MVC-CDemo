@@ -27,7 +27,7 @@ class SecondCoordinator: ModuleCoordinator {
     }
     
     func didTapButton() {
-        
+        (rootController as? ContentViewController)?.proceedForwards(from: self)
     }
     
     func didTapBackButton() {

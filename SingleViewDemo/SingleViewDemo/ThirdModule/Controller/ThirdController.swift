@@ -1,22 +1,22 @@
 //
-//  SecondController.swift
+//  ThirdController.swift
 //  SingleViewDemo
 //
-//  Created by Dariy Kordiyak on 3/16/19.
+//  Created by Dariy Kordiyak on 3/25/19.
 //  Copyright © 2019 Dariy Kordiyak. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class SecondController {
+class ThirdController {
     
     // MARK: - Properties
     
-    private let coordinator: SecondCoordinator
+    private let coordinator: ThirdCoordinator
     
     // MARK: - Initialization
     
-    init(coordinator: SecondCoordinator) {
+    init(coordinator: ThirdCoordinator) {
         self.coordinator = coordinator
     }
     
@@ -24,10 +24,6 @@ class SecondController {
     
     func didTapBackButton() {
         coordinator.didTapBackButton()
-    }
-    
-    func didTapButton() {
-        coordinator.didTapButton()
     }
     
 }
