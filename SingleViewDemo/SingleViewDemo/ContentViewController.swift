@@ -20,34 +20,7 @@ class ContentViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .red
-        
-        startFirstModule()
-    }
-    
-    // MARK: - Setup
-    
-    private func startFirstModule() {
-        viewModules.removeAll()
-        
-        let coordinator = FirstCoordinator()
-        coordinator.start(from: self)
-        
-        viewModules.append(coordinator)
-    }
-    
-    private func startSecondModule() -> ModuleCoordinator {
-        let coordinator = SecondCoordinator()
-        coordinator.start(from: self)
-        
-        return coordinator
-        //viewModules.append(coordinator)
-    }
-    
-    private func startThirdModule() {
-        let coordinator = ThirdCoordinator()
-        coordinator.start(from: self)
-        
-        viewModules.append(coordinator)
+        addNew(FirstCoordinator())
     }
     
     // MARK: - API
@@ -55,25 +28,42 @@ class ContentViewController: UIViewController {
     func proceedForwards(from module: ModuleCoordinator) {
         switch viewModules.count {
         case 1:
-            let c = startSecondModule()
-            viewModules.append(c)
+            addNew(SecondCoordinator())
         case 2:
-            startThirdModule()
+            addNew(ThirdCoordinator())
         default:
             break
         }
     }
     
     func proceedBackwards(from module: ModuleCoordinator) {
+        viewModules.removeLast()
+        
         switch viewModules.count {
+        case 1:
+            start(FirstCoordinator())
         case 2:
-            startFirstModule()
-        case 3:
-            viewModules.removeLast()
-            startSecondModule()
+            start(SecondCoordinator())
         default:
             break
         }
+    }
+    
+    // MARK: - Private
+    
+    /// Add new module coordinator to modules array and starts it
+    ///
+    /// - Parameter module: module coordinatore
+    private func addNew(_ module: ModuleCoordinator) {
+        start(module)
+        viewModules.append(module)
+    }
+    
+    /// Starts module coordinator, that was already added to modules array
+    ///
+    /// - Parameter module: module coordinator
+    private func start(_ module: ModuleCoordinator) {
+        module.start(from: self)
     }
     
 }
