@@ -17,7 +17,7 @@ class SecondView: UIView {
     
     private var transitionButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("AAA", for: .normal)
+        button.setTitle("Last view", for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         button.sizeToFit()
         

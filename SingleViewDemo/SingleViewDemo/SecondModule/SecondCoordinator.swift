@@ -12,11 +12,11 @@ class SecondCoordinator: ModuleCoordinator {
     
     // MARK: - Properties
     
-    weak var rootController: UIViewController?
+    weak var rootController: ContentViewController?
     
     // MARK: - API
     
-    func start(from contentController: UIViewController) {
+    func start(from contentController: ContentViewController) {
         let secondController = SecondController(coordinator: self)
         let secondView = SecondView(dataSource: secondController,
                                   eventsHandler: secondController,
@@ -27,11 +27,11 @@ class SecondCoordinator: ModuleCoordinator {
     }
     
     func didTapButton() {
-        (rootController as? ContentViewController)?.proceedForwards(from: self)
+        rootController?.proceedForwards(from: self)
     }
     
     func didTapBackButton() {
-        (rootController as? ContentViewController)?.proceedBackwards(from: self)
+        rootController?.proceedBackwards(from: self)
     }
     
 }

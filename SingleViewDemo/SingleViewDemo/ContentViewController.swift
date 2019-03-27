@@ -53,7 +53,7 @@ class ContentViewController: UIViewController {
     
     /// Add new module coordinator to modules array and starts it
     ///
-    /// - Parameter module: module coordinatore
+    /// - Parameter module: module coordinator
     private func addNew(_ module: ModuleCoordinator) {
         start(module)
         viewModules.append(module)

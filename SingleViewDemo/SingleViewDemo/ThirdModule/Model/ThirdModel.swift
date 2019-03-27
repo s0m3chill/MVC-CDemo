@@ -10,4 +10,8 @@ import Foundation
 
 class ThirdModel {
     
+    func imageName() -> String {
+        return "checkmark.png"
+    }
+    
 }

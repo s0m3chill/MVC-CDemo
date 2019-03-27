@@ -13,14 +13,20 @@ class ThirdController {
     // MARK: - Properties
     
     private let coordinator: ThirdCoordinator
+    private let datasource: ThirdModel
     
     // MARK: - Initialization
     
-    init(coordinator: ThirdCoordinator) {
+    init(coordinator: ThirdCoordinator, datasource: ThirdModel) {
         self.coordinator = coordinator
+        self.datasource = datasource
     }
     
     // MARK: - API
+    
+    func imageName() -> String {
+        return datasource.imageName()
+    }
     
     func didTapBackButton() {
         coordinator.didTapBackButton()

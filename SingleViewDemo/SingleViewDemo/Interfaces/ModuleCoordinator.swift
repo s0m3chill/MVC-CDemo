@@ -10,7 +10,7 @@ import UIKit
 
 protocol ModuleCoordinator: class {
     /// Root view controller for the module, should be used as WEAK
-    var rootController: UIViewController? { get }
+    var rootController: ContentViewController? { get }
     /// Show module, based on content view controller
-    func start(from contentController: UIViewController)
+    func start(from contentController: ContentViewController)
 }

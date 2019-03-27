@@ -15,15 +15,6 @@ class ThirdView: UIView {
     private let dataSource: ThirdController
     private let eventsHandler: ThirdController
     
-    private var transitionButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("AAA", for: .normal)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        button.sizeToFit()
-        
-        return button
-    }()
-    
     private var backButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Back", for: .normal)
@@ -31,6 +22,12 @@ class ThirdView: UIView {
         button.sizeToFit()
         
         return button
+    }()
+    
+    private var contentImageView: UIImageView = {
+        let imageView = UIImageView(frame: .zero)
+
+        return imageView
     }()
     
     // MARK: - Initialization
@@ -55,18 +52,17 @@ class ThirdView: UIView {
     private func setupView() {
         backgroundColor = .blue
         
-        addSubview(transitionButton)
-        transitionButton.center = center
-        
         addSubview(backButton)
         backButton.center = CGPoint(x: 50, y: 50)
+        
+        addSubview(contentImageView)
+        let imageName = dataSource.imageName()
+        contentImageView.image = UIImage(named: imageName)
+        contentImageView.sizeToFit()
+        contentImageView.center = center
     }
     
     // MARK: - Actions
-    
-    @objc private func buttonAction() {
-        
-    }
     
     @objc private func backButtonAction() {
         eventsHandler.didTapBackButton()
