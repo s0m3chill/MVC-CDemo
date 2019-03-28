@@ -11,7 +11,6 @@
 		471D96FD2249242F0069C493 /* ThirdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D96FC2249242F0069C493 /* ThirdModel.swift */; };
 		471D96FF224924420069C493 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D96FE224924420069C493 /* ThirdView.swift */; };
 		471D9701224924730069C493 /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D9700224924730069C493 /* ThirdController.swift */; };
-		473444C0224D47B400C97B12 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 473444BF224D47B400C97B12 /* Info.plist */; };
 		4749298D223D178D00DB7CBA /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749298C223D178D00DB7CBA /* FirstView.swift */; };
 		4749298F223D179C00DB7CBA /* FirstModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749298E223D179C00DB7CBA /* FirstModel.swift */; };
 		47492991223D17B000DB7CBA /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47492990223D17B000DB7CBA /* FirstController.swift */; };
@@ -265,7 +264,6 @@
 			files = (
 				47D445D3223C47230048CF60 /* LaunchScreen.storyboard in Resources */,
 				47D445D0223C47230048CF60 /* Assets.xcassets in Resources */,
-				473444C0224D47B400C97B12 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,4 +13,14 @@ protocol ModuleCoordinator: class {
     var rootController: ContentViewController? { get }
     /// Show module, based on content view controller
     func start(from contentController: ContentViewController)
+    /// Remove module from content view controller
+    func remove()
+}
+
+extension ModuleCoordinator {
+    
+    func remove() {
+        rootController?.view.subviews.last?.removeFromSuperview()
+    }
+    
 }

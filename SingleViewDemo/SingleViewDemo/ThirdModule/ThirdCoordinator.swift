@@ -24,9 +24,9 @@ class ThirdCoordinator: ModuleCoordinator {
                                     frame: contentController.view.frame)
         
         rootController = contentController
-        contentController.view = thirdView
+        contentController.view.addSubview(thirdView)
     }
-    
+        
     func didTapBackButton() {
         rootController?.proceedBackwards(from: self)
     }

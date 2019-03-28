@@ -20,7 +20,7 @@ class ContentViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .red
-        addNew(FirstCoordinator())
+        proceedTo(FirstCoordinator())
     }
     
     // MARK: - API
@@ -28,42 +28,31 @@ class ContentViewController: UIViewController {
     func proceedForwards(from module: ModuleCoordinator) {
         switch viewModules.count {
         case 1:
-            addNew(SecondCoordinator())
+            proceedTo(SecondCoordinator())
         case 2:
-            addNew(ThirdCoordinator())
+            proceedTo(ThirdCoordinator())
         default:
             break
         }
     }
     
     func proceedBackwards(from module: ModuleCoordinator) {
-        viewModules.removeLast()
-        
-        switch viewModules.count {
-        case 1:
-            start(FirstCoordinator())
-        case 2:
-            start(SecondCoordinator())
-        default:
-            break
-        }
+        returnBack(from: module)
     }
     
     // MARK: - Private
     
-    /// Add new module coordinator to modules array and starts it
+    /// Adds new module coordinator to modules array and starts it
     ///
     /// - Parameter module: module coordinator
-    private func addNew(_ module: ModuleCoordinator) {
-        start(module)
+    private func proceedTo(_ module: ModuleCoordinator) {
+        module.start(from: self)
         viewModules.append(module)
     }
     
-    /// Starts module coordinator, that was already added to modules array
-    ///
-    /// - Parameter module: module coordinator
-    private func start(_ module: ModuleCoordinator) {
-        module.start(from: self)
+    private func returnBack(from module: ModuleCoordinator) {
+        module.remove()
+        viewModules.removeLast()
     }
     
 }

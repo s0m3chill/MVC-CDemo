@@ -23,9 +23,9 @@ class SecondCoordinator: ModuleCoordinator {
                                   frame: contentController.view.frame)
         
         rootController = contentController
-        contentController.view = secondView
+        contentController.view.addSubview(secondView)
     }
-    
+        
     func didTapButton() {
         rootController?.proceedForwards(from: self)
     }

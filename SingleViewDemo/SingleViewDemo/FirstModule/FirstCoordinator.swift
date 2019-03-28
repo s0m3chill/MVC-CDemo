@@ -23,9 +23,9 @@ class FirstCoordinator: ModuleCoordinator {
                                   frame: contentController.view.frame)
         
         rootController = contentController
-        contentController.view = firstView
+        contentController.view.addSubview(firstView)
     }
-    
+        
     func didTapButton() {
         rootController?.proceedForwards(from: self)
     }
