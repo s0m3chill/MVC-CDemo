@@ -11,6 +11,7 @@
 		471D96FD2249242F0069C493 /* ThirdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D96FC2249242F0069C493 /* ThirdModel.swift */; };
 		471D96FF224924420069C493 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D96FE224924420069C493 /* ThirdView.swift */; };
 		471D9701224924730069C493 /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D9700224924730069C493 /* ThirdController.swift */; };
+		473444BE224D462900C97B12 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 473444BD224D462900C97B12 /* Info.plist */; };
 		4749298D223D178D00DB7CBA /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749298C223D178D00DB7CBA /* FirstView.swift */; };
 		4749298F223D179C00DB7CBA /* FirstModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749298E223D179C00DB7CBA /* FirstModel.swift */; };
 		47492991223D17B000DB7CBA /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47492990223D17B000DB7CBA /* FirstController.swift */; };
@@ -31,7 +32,7 @@
 		471D96FC2249242F0069C493 /* ThirdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdModel.swift; sourceTree = "<group>"; };
 		471D96FE224924420069C493 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 		471D9700224924730069C493 /* ThirdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdController.swift; sourceTree = "<group>"; };
-		473444BA224D44AF00C97B12 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		473444BD224D462900C97B12 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4749298C223D178D00DB7CBA /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		4749298E223D179C00DB7CBA /* FirstModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstModel.swift; sourceTree = "<group>"; };
 		47492990223D17B000DB7CBA /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
@@ -92,14 +93,6 @@
 				471D9700224924730069C493 /* ThirdController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		473444B9224D449E00C97B12 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-				473444BA224D44AF00C97B12 /* Info.plist */,
-			);
-			path = Misc;
 			sourceTree = "<group>";
 		};
 		47492988223D174C00DB7CBA /* FirstModule */ = {
@@ -199,7 +192,6 @@
 		47D445C7223C47220048CF60 /* SingleViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				473444B9224D449E00C97B12 /* Misc */,
 				47D445C8223C47220048CF60 /* AppDelegate.swift */,
 				47492996223D1B2800DB7CBA /* Interfaces */,
 				47492988223D174C00DB7CBA /* FirstModule */,
@@ -208,6 +200,7 @@
 				47D445CA223C47220048CF60 /* ContentViewController.swift */,
 				47D445CF223C47230048CF60 /* Assets.xcassets */,
 				47D445D1223C47230048CF60 /* LaunchScreen.storyboard */,
+				473444BD224D462900C97B12 /* Info.plist */,
 			);
 			path = SingleViewDemo;
 			sourceTree = "<group>";
@@ -272,6 +265,7 @@
 			files = (
 				47D445D3223C47230048CF60 /* LaunchScreen.storyboard in Resources */,
 				47D445D0223C47230048CF60 /* Assets.xcassets in Resources */,
+				473444BE224D462900C97B12 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V62PZ8S9D8;
-				INFOPLIST_FILE = SingleViewDemo/Misc/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SingleViewDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V62PZ8S9D8;
-				INFOPLIST_FILE = SingleViewDemo/Misc/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SingleViewDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
