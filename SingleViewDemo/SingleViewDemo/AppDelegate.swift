@@ -18,9 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Delegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let contentController = ContentViewController()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ContentViewController()
+        window?.rootViewController = contentController
         window?.makeKeyAndVisible()
+        
+        let appCoorinator = AppCoordinator(contentController: contentController,
+                                           moduleFactory: ModuleFactory())
+        appCoorinator.push(to: .first)
         
         return true
     }

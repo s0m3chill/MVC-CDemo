@@ -26,6 +26,9 @@
 		47D445D0223C47230048CF60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D445CF223C47230048CF60 /* Assets.xcassets */; };
 		47D445D3223C47230048CF60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D445D1223C47230048CF60 /* LaunchScreen.storyboard */; };
 		47F6FA7D224E42220020C400 /* ModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F6FA7C224E42220020C400 /* ModuleController.swift */; };
+		47F6FA7F224E51A00020C400 /* ModuleTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F6FA7E224E51A00020C400 /* ModuleTypes.swift */; };
+		47F6FA81224E56250020C400 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F6FA80224E56250020C400 /* ModuleFactory.swift */; };
+		47F6FA83224E58F40020C400 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F6FA82224E58F40020C400 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		47D445CF223C47230048CF60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47D445D2223C47230048CF60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47F6FA7C224E42220020C400 /* ModuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleController.swift; sourceTree = "<group>"; };
+		47F6FA7E224E51A00020C400 /* ModuleTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTypes.swift; sourceTree = "<group>"; };
+		47F6FA80224E56250020C400 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		47F6FA82224E58F40020C400 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,7 @@
 		47492996223D1B2800DB7CBA /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				47F6FA7E224E51A00020C400 /* ModuleTypes.swift */,
 				47573F41224E299900EFF853 /* ContentCoordinator.swift */,
 				47492994223D186100DB7CBA /* ModuleCoordinator.swift */,
 				47F6FA7C224E42220020C400 /* ModuleController.swift */,
@@ -198,11 +205,13 @@
 			isa = PBXGroup;
 			children = (
 				47D445C8223C47220048CF60 /* AppDelegate.swift */,
+				47F6FA82224E58F40020C400 /* AppCoordinator.swift */,
 				47492996223D1B2800DB7CBA /* Interfaces */,
 				47492988223D174C00DB7CBA /* FirstModule */,
 				47492999223D1F3100DB7CBA /* SecondModule */,
 				471D96F6224923230069C493 /* ThirdModule */,
 				47D445CA223C47220048CF60 /* ContentViewController.swift */,
+				47F6FA80224E56250020C400 /* ModuleFactory.swift */,
 				47D445CF223C47230048CF60 /* Assets.xcassets */,
 				47D445D1223C47230048CF60 /* LaunchScreen.storyboard */,
 				473444BF224D47B400C97B12 /* Info.plist */,
@@ -281,7 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				471D96FF224924420069C493 /* ThirdView.swift in Sources */,
+				47F6FA7F224E51A00020C400 /* ModuleTypes.swift in Sources */,
 				471D9701224924730069C493 /* ThirdController.swift in Sources */,
+				47F6FA81224E56250020C400 /* ModuleFactory.swift in Sources */,
 				47573F42224E299900EFF853 /* ContentCoordinator.swift in Sources */,
 				4749298F223D179C00DB7CBA /* FirstModel.swift in Sources */,
 				47492995223D186100DB7CBA /* ModuleCoordinator.swift in Sources */,
@@ -290,6 +301,7 @@
 				471D96FD2249242F0069C493 /* ThirdModel.swift in Sources */,
 				47492993223D17DB00DB7CBA /* FirstCoordinator.swift in Sources */,
 				471D96F82249233D0069C493 /* ThirdCoordinator.swift in Sources */,
+				47F6FA83224E58F40020C400 /* AppCoordinator.swift in Sources */,
 				474929A0223D209200DB7CBA /* SecondModel.swift in Sources */,
 				47D445CB223C47220048CF60 /* ContentViewController.swift in Sources */,
 				474929A2223D209B00DB7CBA /* SecondView.swift in Sources */,

@@ -6,34 +6,35 @@
 //  Copyright © 2019 Dariy Kordiyak. All rights reserved.
 //
 
-import UIKit
-
 class FirstCoordinator: ModuleCoordinator {
     
     // MARK: - Properties
     
+    var type: ModuleTypes {
+        return .first
+    }
     weak var rootController: ModuleController?
-    var contentCoordinator: (ContentCoordinator & UIViewController)?
+    
+    private var contentCoordinator: ContentCoordinator?
     
     // MARK: - API
     
-    func start(from contentCoordinator: UIViewController & ContentCoordinator) {
+    func start(from coordinator: ContentCoordinator, controller: ModuleController) {
         let firstController = FirstController(coordinator: self)
         let firstView = FirstView(dataSource: firstController,
                                   eventsHandler: firstController,
-                                  frame: contentCoordinator.view.frame)
-        
+                                  frame: controller.contentView?.frame ?? .zero)
         rootController = firstController
-        rootController?.view = firstView
+        rootController?.contentView = firstView
         
-        self.contentCoordinator = contentCoordinator
-        contentCoordinator.view.addSubview(firstView)
+        contentCoordinator = coordinator
+        controller.contentView?.addSubview(firstView)
     }
         
     // MARK: - Actions
         
     func didTapButton() {
-        contentCoordinator?.proceedForwards()
+        contentCoordinator?.push(to: .second)
     }
     
 }

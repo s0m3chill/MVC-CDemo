@@ -6,15 +6,13 @@
 //  Copyright © 2019 Dariy Kordiyak. All rights reserved.
 //
 
-import UIKit
-
 protocol ModuleCoordinator: class {
-    /// Content coordinator for module
-    var contentCoordinator: (ContentCoordinator & UIViewController)? { get }
+    /// Module coordinator identifier
+    var type: ModuleTypes { get }
     /// Root view controller for the module, should be used as WEAK
     var rootController: ModuleController? { get }
     /// Show module, based on content view controller
-    func start(from contentCoordinator: ContentCoordinator & UIViewController)
+    func start(from coordinator: ContentCoordinator, controller: ModuleController)
     /// Remove module from content view controller
     func remove()
 }
@@ -22,7 +20,7 @@ protocol ModuleCoordinator: class {
 extension ModuleCoordinator {
     
     func remove() {
-        rootController?.view?.removeFromSuperview()
+        rootController?.contentView?.removeFromSuperview()
     }
     
 }

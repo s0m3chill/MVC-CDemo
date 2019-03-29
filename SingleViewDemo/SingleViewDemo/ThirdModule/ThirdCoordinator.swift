@@ -6,35 +6,37 @@
 //  Copyright © 2019 Dariy Kordiyak. All rights reserved.
 //
 
-import UIKit
-
 class ThirdCoordinator: ModuleCoordinator {
     
     // MARK: - Properties
     
+    var type: ModuleTypes {
+        return .third
+    }
     weak var rootController: ModuleController?
-    var contentCoordinator: (ContentCoordinator & UIViewController)?
+    
+    private var contentCoordinator: ContentCoordinator?
     
     // MARK: - API
     
-    func start(from contentCoordinator: ContentCoordinator & UIViewController) {
+    func start(from coordinator: ContentCoordinator, controller: ModuleController) {
         let thirdController = ThirdController(coordinator: self,
                                               datasource: ThirdModel())
         let thirdView = ThirdView(dataSource: thirdController,
-                                    eventsHandler: thirdController,
-                                    frame: contentCoordinator.view.frame)
+                                  eventsHandler: thirdController,
+                                  frame: controller.contentView?.frame ?? .zero)
         
         rootController = thirdController
-        rootController?.view = thirdView
+        rootController?.contentView = thirdView
         
-        self.contentCoordinator = contentCoordinator
-        contentCoordinator.view.addSubview(thirdView)
+        contentCoordinator = coordinator
+        controller.contentView?.addSubview(thirdView)
     }
         
     // MARK: - Actions
         
     func didTapBackButton() {
-        contentCoordinator?.proceedBackwards(from: self)
+        contentCoordinator?.pop(from: self)
     }
     
 }

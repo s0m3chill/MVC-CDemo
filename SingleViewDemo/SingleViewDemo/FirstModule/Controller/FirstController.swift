@@ -12,7 +12,7 @@ class FirstController: ModuleController {
     
     // MARK: - Properties
     
-    weak var view: UIView?
+    weak var contentView: UIView?
     
     private let coordinator: FirstCoordinator
     

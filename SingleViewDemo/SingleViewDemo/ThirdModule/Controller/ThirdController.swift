@@ -12,7 +12,7 @@ class ThirdController: ModuleController {
     
     // MARK: - Properties
     
-    weak var view: UIView?
+    weak var contentView: UIView?
     
     private let coordinator: ThirdCoordinator
     private let datasource: ThirdModel
