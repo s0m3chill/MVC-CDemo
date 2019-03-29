@@ -14,7 +14,7 @@ class ModuleFactory {
     
     // MARK: - API
     
-    func module() -> ModuleCoordinator {
+    func moduleCoordinator() -> ModuleCoordinator {
         switch type {
         case .first:
             return FirstCoordinator()

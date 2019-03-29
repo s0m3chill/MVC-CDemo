@@ -12,12 +12,13 @@ class AppCoordinator: ContentCoordinator {
     
     // MARK: - Properties
     
+    /// Module coordinators stack
+    var viewModules: [ModuleCoordinator] = []
+
     /// Module construction factory
     private let moduleFactory: ModuleFactory
     /// Content view controler, where modules are added to
     private let contentController: ContentViewController
-    /// Module coordinators stack
-    private var viewModules: [ModuleCoordinator] = []
     
     // MARK: - Initialization
     init(contentController: ContentViewController,
@@ -29,10 +30,10 @@ class AppCoordinator: ContentCoordinator {
     
     // MARK: - API
     
-    func push(to moduleType: ModuleTypes) {
-        moduleFactory.type = moduleType
+    func push(to module: ModuleTypes) {
+        moduleFactory.type = module
         
-        let toModule = moduleFactory.module()
+        let toModule = moduleFactory.moduleCoordinator()
         toModule.start(from: self, controller: contentController)
         
         viewModules.append(toModule)

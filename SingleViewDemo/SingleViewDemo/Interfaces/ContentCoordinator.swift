@@ -7,6 +7,10 @@
 //
 
 protocol ContentCoordinator {
-    func push(to moduleType: ModuleTypes)
+    /// Module coordinators stack
+    var viewModules: [ModuleCoordinator] { get set }
+    /// Proceed to next module
+    func push(to module: ModuleTypes)
+    /// Pop back from module
     func pop(from: ModuleCoordinator)
 }
