@@ -12,7 +12,8 @@ class FirstController: ModuleController {
     
     // MARK: - Properties
     
-    var view: UIView?
+    weak var view: UIView?
+    
     private let coordinator: FirstCoordinator
     
     // MARK: - Initialization

@@ -12,7 +12,7 @@ class SecondController: ModuleController {
     
     // MARK: - Properties
     
-    var view: UIView?
+    weak var view: UIView?
     
     private let coordinator: SecondCoordinator
     
