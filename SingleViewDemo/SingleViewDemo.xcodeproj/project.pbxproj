@@ -20,10 +20,12 @@
 		474929A0223D209200DB7CBA /* SecondModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749299F223D209200DB7CBA /* SecondModel.swift */; };
 		474929A2223D209B00DB7CBA /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474929A1223D209B00DB7CBA /* SecondView.swift */; };
 		474929A4223D20A700DB7CBA /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474929A3223D20A700DB7CBA /* SecondController.swift */; };
+		47573F42224E299900EFF853 /* ContentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47573F41224E299900EFF853 /* ContentCoordinator.swift */; };
 		47D445C9223C47220048CF60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D445C8223C47220048CF60 /* AppDelegate.swift */; };
 		47D445CB223C47220048CF60 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D445CA223C47220048CF60 /* ContentViewController.swift */; };
 		47D445D0223C47230048CF60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D445CF223C47230048CF60 /* Assets.xcassets */; };
 		47D445D3223C47230048CF60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D445D1223C47230048CF60 /* LaunchScreen.storyboard */; };
+		47F6FA7D224E42220020C400 /* ModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F6FA7C224E42220020C400 /* ModuleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,11 +43,13 @@
 		4749299F223D209200DB7CBA /* SecondModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModel.swift; sourceTree = "<group>"; };
 		474929A1223D209B00DB7CBA /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		474929A3223D20A700DB7CBA /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
+		47573F41224E299900EFF853 /* ContentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCoordinator.swift; sourceTree = "<group>"; };
 		47D445C5223C47220048CF60 /* SingleViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D445C8223C47220048CF60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D445CA223C47220048CF60 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		47D445CF223C47230048CF60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47D445D2223C47230048CF60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		47F6FA7C224E42220020C400 /* ModuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +136,9 @@
 		47492996223D1B2800DB7CBA /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				47573F41224E299900EFF853 /* ContentCoordinator.swift */,
 				47492994223D186100DB7CBA /* ModuleCoordinator.swift */,
+				47F6FA7C224E42220020C400 /* ModuleController.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -276,8 +282,10 @@
 			files = (
 				471D96FF224924420069C493 /* ThirdView.swift in Sources */,
 				471D9701224924730069C493 /* ThirdController.swift in Sources */,
+				47573F42224E299900EFF853 /* ContentCoordinator.swift in Sources */,
 				4749298F223D179C00DB7CBA /* FirstModel.swift in Sources */,
 				47492995223D186100DB7CBA /* ModuleCoordinator.swift in Sources */,
+				47F6FA7D224E42220020C400 /* ModuleController.swift in Sources */,
 				4749299B223D1F7800DB7CBA /* SecondCoordinator.swift in Sources */,
 				471D96FD2249242F0069C493 /* ThirdModel.swift in Sources */,
 				47492993223D17DB00DB7CBA /* FirstCoordinator.swift in Sources */,

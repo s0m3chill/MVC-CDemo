@@ -6,12 +6,13 @@
 //  Copyright © 2019 Dariy Kordiyak. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class FirstController {
+class FirstController: ModuleController {
     
     // MARK: - Properties
     
+    var view: UIView?
     private let coordinator: FirstCoordinator
     
     // MARK: - Initialization

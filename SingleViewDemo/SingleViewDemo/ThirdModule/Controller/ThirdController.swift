@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ThirdController {
+class ThirdController: ModuleController {
     
     // MARK: - Properties
+    
+    var view: UIView?
     
     private let coordinator: ThirdCoordinator
     private let datasource: ThirdModel

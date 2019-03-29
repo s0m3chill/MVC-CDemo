@@ -12,23 +12,29 @@ class ThirdCoordinator: ModuleCoordinator {
     
     // MARK: - Properties
     
-    weak var rootController: ContentViewController?
+    weak var rootController: ModuleController?
+    var contentCoordinator: (ContentCoordinator & UIViewController)?
     
     // MARK: - API
     
-    func start(from contentController: ContentViewController) {
+    func start(from contentCoordinator: ContentCoordinator & UIViewController) {
         let thirdController = ThirdController(coordinator: self,
                                               datasource: ThirdModel())
         let thirdView = ThirdView(dataSource: thirdController,
                                     eventsHandler: thirdController,
-                                    frame: contentController.view.frame)
+                                    frame: contentCoordinator.view.frame)
         
-        rootController = contentController
-        contentController.view.addSubview(thirdView)
+        rootController = thirdController
+        rootController?.view = thirdView
+        
+        self.contentCoordinator = contentCoordinator
+        contentCoordinator.view.addSubview(thirdView)
     }
         
+    // MARK: - Actions
+        
     func didTapBackButton() {
-        rootController?.proceedBackwards(from: self)
+        contentCoordinator?.proceedBackwards(from: self)
     }
     
 }

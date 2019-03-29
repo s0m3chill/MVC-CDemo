@@ -6,11 +6,13 @@
 //  Copyright © 2019 Dariy Kordiyak. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class SecondController {
+class SecondController: ModuleController {
     
     // MARK: - Properties
+    
+    var view: UIView?
     
     private let coordinator: SecondCoordinator
     

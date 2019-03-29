@@ -27,25 +27,6 @@ class ContentViewController: UIViewController {
         proceedTo(FirstCoordinator())
     }
     
-    // MARK: - API
-    
-    /// Perform PUSH transition to module's view
-    func proceedForwards(from module: ModuleCoordinator) {
-        switch viewModules.count {
-        case 1:
-            proceedTo(SecondCoordinator())
-        case 2:
-            proceedTo(ThirdCoordinator())
-        default:
-            break
-        }
-    }
-    
-    /// Perform POP transition from module's view
-    func proceedBackwards(from module: ModuleCoordinator) {
-        returnBack(from: module)
-    }
-    
     // MARK: - Private
     
     /// Adds new module coordinator to modules array and
@@ -63,6 +44,25 @@ class ContentViewController: UIViewController {
     private func returnBack(from module: ModuleCoordinator) {
         module.remove()
         viewModules.removeLast()
+    }
+    
+}
+
+extension ContentViewController: ContentCoordinator {
+    
+    func proceedForwards() {
+        switch viewModules.count {
+        case 1:
+            proceedTo(SecondCoordinator())
+        case 2:
+            proceedTo(ThirdCoordinator())
+        default:
+            break
+        }
+    }
+    
+    func proceedBackwards(from module: ModuleCoordinator) {
+        returnBack(from: module)
     }
     
 }

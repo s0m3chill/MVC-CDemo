@@ -12,22 +12,28 @@ class FirstCoordinator: ModuleCoordinator {
     
     // MARK: - Properties
     
-    weak var rootController: ContentViewController?
+    weak var rootController: ModuleController?
+    var contentCoordinator: (ContentCoordinator & UIViewController)?
     
     // MARK: - API
     
-    func start(from contentController: ContentViewController) {
+    func start(from contentCoordinator: UIViewController & ContentCoordinator) {
         let firstController = FirstController(coordinator: self)
         let firstView = FirstView(dataSource: firstController,
                                   eventsHandler: firstController,
-                                  frame: contentController.view.frame)
+                                  frame: contentCoordinator.view.frame)
         
-        rootController = contentController
-        contentController.view.addSubview(firstView)
+        rootController = firstController
+        rootController?.view = firstView
+        
+        self.contentCoordinator = contentCoordinator
+        contentCoordinator.view.addSubview(firstView)
     }
         
+    // MARK: - Actions
+        
     func didTapButton() {
-        rootController?.proceedForwards(from: self)
+        contentCoordinator?.proceedForwards()
     }
     
 }
