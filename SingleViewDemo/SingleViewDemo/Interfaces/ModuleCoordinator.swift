@@ -12,7 +12,7 @@ protocol ModuleCoordinator: class {
     /// Root view controller for the module, should be used as WEAK
     var rootController: ModuleController? { get }
     /// Show module, based on content view controller
-    func start(from coordinator: ContentCoordinator, controller: ModuleController)
+    func start(from coordinator: AppCoordinatorInterface, controller: ModuleController)
     /// Remove module from content view controller
     func remove()
 }

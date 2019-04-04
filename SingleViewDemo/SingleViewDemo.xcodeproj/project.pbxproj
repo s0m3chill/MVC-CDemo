@@ -20,29 +20,10 @@
 		474929A0223D209200DB7CBA /* SecondModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749299F223D209200DB7CBA /* SecondModel.swift */; };
 		474929A2223D209B00DB7CBA /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474929A1223D209B00DB7CBA /* SecondView.swift */; };
 		474929A4223D20A700DB7CBA /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474929A3223D20A700DB7CBA /* SecondController.swift */; };
-		47573F42224E299900EFF853 /* ContentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47573F41224E299900EFF853 /* ContentCoordinator.swift */; };
 		47A8F04A224E669F001EE21C /* ModuleFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A8F049224E669F001EE21C /* ModuleFactoryTests.swift */; };
-		47A8F04B224E66A4001EE21C /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F6FA80224E56250020C400 /* ModuleFactory.swift */; };
-		47A8F04C224E66DD001EE21C /* ModuleTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F6FA7E224E51A00020C400 /* ModuleTypes.swift */; };
-		47A8F04D224E66E8001EE21C /* ModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47492994223D186100DB7CBA /* ModuleCoordinator.swift */; };
-		47A8F04E224E6766001EE21C /* ModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F6FA7C224E42220020C400 /* ModuleController.swift */; };
-		47A8F04F224E6769001EE21C /* ContentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47573F41224E299900EFF853 /* ContentCoordinator.swift */; };
-		47A8F050224E6777001EE21C /* FirstCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47492992223D17DB00DB7CBA /* FirstCoordinator.swift */; };
-		47A8F051224E677D001EE21C /* SecondCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749299A223D1F7800DB7CBA /* SecondCoordinator.swift */; };
-		47A8F052224E6783001EE21C /* ThirdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D96F72249233D0069C493 /* ThirdCoordinator.swift */; };
-		47A8F053224E67A9001EE21C /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47492990223D17B000DB7CBA /* FirstController.swift */; };
-		47A8F054224E67AB001EE21C /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749298C223D178D00DB7CBA /* FirstView.swift */; };
-		47A8F055224E67AD001EE21C /* FirstModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749298E223D179C00DB7CBA /* FirstModel.swift */; };
-		47A8F056224E67AF001EE21C /* SecondModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749299F223D209200DB7CBA /* SecondModel.swift */; };
-		47A8F057224E67B1001EE21C /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474929A1223D209B00DB7CBA /* SecondView.swift */; };
-		47A8F058224E67B3001EE21C /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474929A3223D20A700DB7CBA /* SecondController.swift */; };
-		47A8F059224E67B8001EE21C /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D9700224924730069C493 /* ThirdController.swift */; };
-		47A8F05A224E67BA001EE21C /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D96FE224924420069C493 /* ThirdView.swift */; };
-		47A8F05B224E67BD001EE21C /* ThirdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D96FC2249242F0069C493 /* ThirdModel.swift */; };
-		47A8F05D224E68A7001EE21C /* ContentCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A8F05C224E68A7001EE21C /* ContentCoordinatorTests.swift */; };
-		47A8F05E224E68CD001EE21C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F6FA82224E58F40020C400 /* AppCoordinator.swift */; };
-		47A8F05F224E68E6001EE21C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D445CA223C47220048CF60 /* ContentViewController.swift */; };
+		47A8F05D224E68A7001EE21C /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A8F05C224E68A7001EE21C /* AppCoordinatorTests.swift */; };
 		47A8F061224E6D4E001EE21C /* ModuleCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A8F060224E6D4E001EE21C /* ModuleCoordinatorTests.swift */; };
+		47CC58FB2256896C009DA0EA /* AppCoordinatorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC58FA2256896C009DA0EA /* AppCoordinatorInterface.swift */; };
 		47D445C9223C47220048CF60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D445C8223C47220048CF60 /* AppDelegate.swift */; };
 		47D445CB223C47220048CF60 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D445CA223C47220048CF60 /* ContentViewController.swift */; };
 		47D445D0223C47230048CF60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D445CF223C47230048CF60 /* Assets.xcassets */; };
@@ -78,12 +59,12 @@
 		4749299F223D209200DB7CBA /* SecondModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModel.swift; sourceTree = "<group>"; };
 		474929A1223D209B00DB7CBA /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		474929A3223D20A700DB7CBA /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
-		47573F41224E299900EFF853 /* ContentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCoordinator.swift; sourceTree = "<group>"; };
 		47A8F03F224E6625001EE21C /* SingleViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A8F043224E6625001EE21C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47A8F049224E669F001EE21C /* ModuleFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryTests.swift; sourceTree = "<group>"; };
-		47A8F05C224E68A7001EE21C /* ContentCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCoordinatorTests.swift; sourceTree = "<group>"; };
+		47A8F05C224E68A7001EE21C /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		47A8F060224E6D4E001EE21C /* ModuleCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCoordinatorTests.swift; sourceTree = "<group>"; };
+		47CC58FA2256896C009DA0EA /* AppCoordinatorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorInterface.swift; sourceTree = "<group>"; };
 		47D445C5223C47220048CF60 /* SingleViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D445C8223C47220048CF60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D445CA223C47220048CF60 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
@@ -187,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				47F6FA7E224E51A00020C400 /* ModuleTypes.swift */,
-				47573F41224E299900EFF853 /* ContentCoordinator.swift */,
+				47CC58FA2256896C009DA0EA /* AppCoordinatorInterface.swift */,
 				47492994223D186100DB7CBA /* ModuleCoordinator.swift */,
 				47F6FA7C224E42220020C400 /* ModuleController.swift */,
 			);
@@ -232,7 +213,7 @@
 		47A8F040224E6625001EE21C /* SingleViewDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				47A8F05C224E68A7001EE21C /* ContentCoordinatorTests.swift */,
+				47A8F05C224E68A7001EE21C /* AppCoordinatorTests.swift */,
 				47A8F060224E6D4E001EE21C /* ModuleCoordinatorTests.swift */,
 				47A8F049224E669F001EE21C /* ModuleFactoryTests.swift */,
 				47A8F043224E6625001EE21C /* Info.plist */,
@@ -376,28 +357,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47A8F057224E67B1001EE21C /* SecondView.swift in Sources */,
-				47A8F050224E6777001EE21C /* FirstCoordinator.swift in Sources */,
-				47A8F04D224E66E8001EE21C /* ModuleCoordinator.swift in Sources */,
-				47A8F05B224E67BD001EE21C /* ThirdModel.swift in Sources */,
-				47A8F053224E67A9001EE21C /* FirstController.swift in Sources */,
-				47A8F05D224E68A7001EE21C /* ContentCoordinatorTests.swift in Sources */,
-				47A8F051224E677D001EE21C /* SecondCoordinator.swift in Sources */,
-				47A8F056224E67AF001EE21C /* SecondModel.swift in Sources */,
-				47A8F05A224E67BA001EE21C /* ThirdView.swift in Sources */,
-				47A8F055224E67AD001EE21C /* FirstModel.swift in Sources */,
+				47A8F05D224E68A7001EE21C /* AppCoordinatorTests.swift in Sources */,
 				47A8F061224E6D4E001EE21C /* ModuleCoordinatorTests.swift in Sources */,
 				47A8F04A224E669F001EE21C /* ModuleFactoryTests.swift in Sources */,
-				47A8F04B224E66A4001EE21C /* ModuleFactory.swift in Sources */,
-				47A8F05E224E68CD001EE21C /* AppCoordinator.swift in Sources */,
-				47A8F05F224E68E6001EE21C /* ContentViewController.swift in Sources */,
-				47A8F058224E67B3001EE21C /* SecondController.swift in Sources */,
-				47A8F04C224E66DD001EE21C /* ModuleTypes.swift in Sources */,
-				47A8F04F224E6769001EE21C /* ContentCoordinator.swift in Sources */,
-				47A8F052224E6783001EE21C /* ThirdCoordinator.swift in Sources */,
-				47A8F054224E67AB001EE21C /* FirstView.swift in Sources */,
-				47A8F04E224E6766001EE21C /* ModuleController.swift in Sources */,
-				47A8F059224E67B8001EE21C /* ThirdController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +371,6 @@
 				47F6FA7F224E51A00020C400 /* ModuleTypes.swift in Sources */,
 				471D9701224924730069C493 /* ThirdController.swift in Sources */,
 				47F6FA81224E56250020C400 /* ModuleFactory.swift in Sources */,
-				47573F42224E299900EFF853 /* ContentCoordinator.swift in Sources */,
 				4749298F223D179C00DB7CBA /* FirstModel.swift in Sources */,
 				47492995223D186100DB7CBA /* ModuleCoordinator.swift in Sources */,
 				47F6FA7D224E42220020C400 /* ModuleController.swift in Sources */,
@@ -424,6 +385,7 @@
 				47492991223D17B000DB7CBA /* FirstController.swift in Sources */,
 				474929A4223D20A700DB7CBA /* SecondController.swift in Sources */,
 				4749298D223D178D00DB7CBA /* FirstView.swift in Sources */,
+				47CC58FB2256896C009DA0EA /* AppCoordinatorInterface.swift in Sources */,
 				47D445C9223C47220048CF60 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

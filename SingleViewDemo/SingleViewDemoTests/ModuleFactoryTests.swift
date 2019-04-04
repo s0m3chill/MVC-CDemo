@@ -7,29 +7,38 @@
 //
 
 import XCTest
+@testable import SingleViewDemo
 
 class ModuleFactoryTests: XCTestCase {
     
     // MARK: - Properties
     
-    private var moduleFactory: ModuleFactory!
+    private var moduleFactory: ModuleFactory?
     
     // MARK: - Setup
 
     override func setUp() {
+        super.setUp()
+        
         moduleFactory = ModuleFactory()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        
+        moduleFactory = nil
     }
     
     // MARK: - Tests
     
     func testCreatedModule() {
-        let coordinator = moduleFactory.moduleCoordinator()
-        XCTAssert(coordinator.type == .first, "Module creation failure")
-    }
-    
-    func testCreatedModuleWithTypeSet() {
-        moduleFactory.type = .third
-        let coordinator = moduleFactory.moduleCoordinator()
+        guard let factory = moduleFactory else {
+            XCTFail("Module factory doesn't exist")
+            return
+        }
+        
+        factory.type = .third
+        let coordinator = factory.moduleCoordinator()
         XCTAssert(coordinator.type == .third, "Module creation failure")
     }
 

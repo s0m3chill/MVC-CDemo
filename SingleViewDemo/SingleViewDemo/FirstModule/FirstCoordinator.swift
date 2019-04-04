@@ -15,11 +15,11 @@ class FirstCoordinator: ModuleCoordinator {
     }
     weak var rootController: ModuleController?
     
-    private var contentCoordinator: ContentCoordinator?
+    private var contentCoordinator: AppCoordinatorInterface?
     
     // MARK: - API
     
-    func start(from coordinator: ContentCoordinator, controller: ModuleController) {
+    func start(from coordinator: AppCoordinatorInterface, controller: ModuleController) {
         let firstController = FirstController(coordinator: self)
         let firstView = FirstView(dataSource: firstController,
                                   eventsHandler: firstController,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppCoordinator: ContentCoordinator {
+class AppCoordinator: AppCoordinatorInterface {
     
     // MARK: - Properties
     
