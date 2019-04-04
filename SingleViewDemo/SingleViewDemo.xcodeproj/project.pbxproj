@@ -307,10 +307,12 @@
 				TargetAttributes = {
 					47A8F03E224E6625001EE21C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 47D445C4223C47220048CF60;
 					};
 					47D445C4223C47220048CF60 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -426,7 +428,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.s0m3chill.SingleViewDemo.SingleViewDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleViewDemo.app/SingleViewDemo";
 			};
@@ -446,7 +448,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.s0m3chill.SingleViewDemo.SingleViewDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleViewDemo.app/SingleViewDemo";
 			};
@@ -583,7 +585,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.s0m3chill.SingleViewDemo.SingleViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -601,7 +603,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.s0m3chill.SingleViewDemo.SingleViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
