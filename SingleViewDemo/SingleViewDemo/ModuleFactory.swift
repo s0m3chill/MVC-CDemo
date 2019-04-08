@@ -6,15 +6,9 @@
 //  Copyright © 2019 Dariy Kordiyak. All rights reserved.
 //
 
-class ModuleFactory {
+struct ModuleFactory {
     
-    // MARK: - Properties
-    
-    var type: ModuleTypes = .first
-    
-    // MARK: - API
-    
-    func moduleCoordinator() -> ModuleCoordinator {
+    static func moduleCoordinator(for type: ModuleTypes) -> ModuleCoordinator {
         switch type {
         case .first:
             return FirstCoordinator()

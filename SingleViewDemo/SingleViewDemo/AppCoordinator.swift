@@ -31,16 +31,18 @@ class AppCoordinator: AppCoordinatorInterface {
     // MARK: - API
     
     func push(to module: ModuleTypes) {
-        moduleFactory.type = module
-        
-        let toModule = moduleFactory.moduleCoordinator()
+        let toModule = ModuleFactory.moduleCoordinator(for: module)
         toModule.start(from: self, controller: contentController)
         
         viewModules.append(toModule)
     }
     
-    func pop(from: ModuleCoordinator) {
-        from.remove()
+    func pop(from: ModuleTypes) {
+        guard let moduleToRemove = (viewModules.first { $0.type == from }) else {
+            fatalError("View modules stack error")
+        }
+        moduleToRemove.remove()
+        
         viewModules.removeLast()
     }
     

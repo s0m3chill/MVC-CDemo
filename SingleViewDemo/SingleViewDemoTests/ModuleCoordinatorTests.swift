@@ -15,14 +15,14 @@ class ModuleCoordinatorTests: XCTestCase {
     
     private var appCoordinator: AppCoordinator?
     private var moduleCoordinator: ModuleCoordinator?
-    
-    private let contentView = UIView(frame: .zero)
+    private var contentView: UIView?
     
     // MARK: - Setup
 
     override func setUp() {
         super.setUp()
         
+        contentView = UIView(frame: .zero)
         moduleCoordinator = SecondCoordinator()
         appCoordinator = AppCoordinator(contentController: ContentViewController(),
                                             moduleFactory: ModuleFactory())
@@ -31,6 +31,7 @@ class ModuleCoordinatorTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
         
+        contentView = nil
         appCoordinator = nil
         moduleCoordinator = nil
     }

@@ -52,7 +52,7 @@ class ContentCoordinatorTests: XCTestCase {
         coordinator.push(to: .first)
         coordinator.push(to: .second)
         coordinator.push(to: .third)
-        coordinator.pop(from: ThirdCoordinator())
+        coordinator.pop(from: .third)
         XCTAssertTrue(coordinator.viewModules.count == 2, "Pop failure")
     }
 

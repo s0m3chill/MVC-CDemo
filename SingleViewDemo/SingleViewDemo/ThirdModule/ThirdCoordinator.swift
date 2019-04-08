@@ -36,7 +36,7 @@ class ThirdCoordinator: ModuleCoordinator {
     // MARK: - Actions
         
     func didTapBackButton() {
-        contentCoordinator?.pop(from: self)
+        contentCoordinator?.pop(from: type)
     }
     
 }

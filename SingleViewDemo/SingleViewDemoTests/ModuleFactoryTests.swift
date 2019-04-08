@@ -11,35 +11,21 @@ import XCTest
 
 class ModuleFactoryTests: XCTestCase {
     
-    // MARK: - Properties
-    
-    private var moduleFactory: ModuleFactory?
-    
-    // MARK: - Setup
-
-    override func setUp() {
-        super.setUp()
-        
-        moduleFactory = ModuleFactory()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-        
-        moduleFactory = nil
-    }
-    
     // MARK: - Tests
     
-    func testCreatedModule() {
-        guard let factory = moduleFactory else {
-            XCTFail("Module factory doesn't exist")
-            return
-        }
-        
-        factory.type = .third
-        let coordinator = factory.moduleCoordinator()
-        XCTAssert(coordinator.type == .third, "Module creation failure")
+    func testFirstModuleCreation() {
+        let coordinator = ModuleFactory.moduleCoordinator(for: .first)
+        XCTAssert(coordinator.type == .first, "First module creation failure")
+    }
+    
+    func testSecondModuleCreation() {
+        let coordinator = ModuleFactory.moduleCoordinator(for: .second)
+        XCTAssert(coordinator.type == .second, "Second module creation failure")
+    }
+    
+    func testThirdModuleCreation() {
+        let coordinator = ModuleFactory.moduleCoordinator(for: .third)
+        XCTAssert(coordinator.type == .third, "Third module creation failure")
     }
 
 }

@@ -39,7 +39,7 @@ class SecondCoordinator: ModuleCoordinator {
     }
     
     func didTapBackButton() {
-        contentCoordinator?.pop(from: self)
+        contentCoordinator?.pop(from: type)
     }
     
 }

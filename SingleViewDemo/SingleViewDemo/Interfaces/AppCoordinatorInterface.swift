@@ -12,5 +12,5 @@ protocol AppCoordinatorInterface {
     /// Proceed to next module
     func push(to module: ModuleTypes)
     /// Pop back from module
-    func pop(from: ModuleCoordinator)
+    func pop(from: ModuleTypes)
 }
