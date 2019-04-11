@@ -13,7 +13,7 @@ class AppCoordinatorTests: XCTestCase {
     
     // MARK: - Properties
     
-    private var appCoordinator: AppCoordinatorInterface?
+    private var appCoordinator: AppCoordinator?
     
     // MARK: - Setup
 
@@ -38,7 +38,9 @@ class AppCoordinatorTests: XCTestCase {
             return
         }
         
-        coordinator.push(to: .first)
+        let firstModule: ModuleTypes = .first
+        
+        coordinator.push(to: firstModule)
         XCTAssertTrue(coordinator.viewModules.count == 1, "Push failure")
     }
     
@@ -48,10 +50,12 @@ class AppCoordinatorTests: XCTestCase {
             return
         }
         
+        let popModule: ModuleTypes = .third
+        
         coordinator.push(to: .first)
         coordinator.push(to: .second)
         coordinator.push(to: .third)
-        coordinator.pop(from: .third)
+        coordinator.pop(from: popModule)
         XCTAssertTrue(coordinator.viewModules.count == 2, "Pop failure")
     }
     

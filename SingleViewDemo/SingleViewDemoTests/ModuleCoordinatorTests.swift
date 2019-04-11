@@ -13,8 +13,7 @@ class ModuleCoordinatorTests: XCTestCase {
     
     // MARK: - Properties
     
-    private var appCoordinator: AppCoordinator?
-    private var moduleCoordinator: ModuleCoordinator?
+    private var appCoordinator: TestAppCoordinator?
     private var contentView: UIView?
     
     // MARK: - Setup
@@ -23,8 +22,7 @@ class ModuleCoordinatorTests: XCTestCase {
         super.setUp()
         
         contentView = UIView(frame: .zero)
-        moduleCoordinator = SecondCoordinator()
-        appCoordinator = AppCoordinator(contentController: ContentViewController(),
+        appCoordinator = TestAppCoordinator(contentController: ContentViewController(),
                                             moduleFactory: ModuleFactory())
     }
     
@@ -33,49 +31,97 @@ class ModuleCoordinatorTests: XCTestCase {
         
         contentView = nil
         appCoordinator = nil
-        moduleCoordinator = nil
     }
     
     // MARK: - Tests
     
-    func testCoordinatorType() {
-        guard let modCoord = moduleCoordinator else {
-            XCTFail("Module coordinator doesn't exist")
+    func testFirstCoordinatorStart() {
+        guard let appCoord = appCoordinator else {
+            XCTFail("Coordinator doesn't exist")
             return
         }
         
-        XCTAssertTrue(modCoord.type == .second, "Wrong coordinator type")
+        let firstCoordinator = FirstCoordinator()
+        let controller = FirstController(coordinator: firstCoordinator)
+        controller.contentView = contentView
+        
+        firstCoordinator.start(from: appCoord, controller: controller)
+        XCTAssertNotNil(firstCoordinator.rootController, "Root controller not set")
     }
     
-    func testCoordinatorStart() {
-        guard let appCoord = appCoordinator,
-              let modCoord = moduleCoordinator
-        else {
-            XCTFail("Coordinator(s) doesn't exist")
+    func testFirstCoordinatorRemove() {
+        guard let appCoord = appCoordinator else {
+            XCTFail("Coordinator doesn't exist")
             return
         }
         
-        let controller = SecondController(coordinator: SecondCoordinator())
+        let firstCoordinator = FirstCoordinator()
+        let controller = FirstController(coordinator: firstCoordinator)
         controller.contentView = contentView
         
-        modCoord.start(from: appCoord, controller: controller)
-        XCTAssertNotNil(modCoord.rootController, "Root controller not set")
+        firstCoordinator.start(from: appCoord, controller: controller)
+        firstCoordinator.remove()
+        XCTAssertNil(firstCoordinator.rootController?.contentView?.superview, "Coordinator content view not removed")
     }
     
-    func testCoordinatorRemove() {
-        guard let appCoord = appCoordinator,
-              let modCoord = moduleCoordinator
-            else {
-                XCTFail("Coordinator(s) doesn't exist")
-                return
+    func testSecondCoordinatorStart() {
+        guard let appCoord = appCoordinator else {
+            XCTFail("Coordinator doesn't exist")
+            return
         }
         
-        let controller = SecondController(coordinator: SecondCoordinator())
+        let secondCoordinator = SecondCoordinator()
+        let controller = SecondController(coordinator: secondCoordinator)
         controller.contentView = contentView
         
-        modCoord.start(from: appCoord, controller: controller)
-        modCoord.remove()
-        XCTAssertNil(modCoord.rootController?.contentView?.superview, "Coordinator content view not removed")
+        secondCoordinator.start(from: appCoord, controller: controller)
+        XCTAssertNotNil(secondCoordinator.rootController, "Root controller not set")
+    }
+    
+    func testSecondCoordinatorRemove() {
+        guard let appCoord = appCoordinator else {
+            XCTFail("Coordinator doesn't exist")
+            return
+        }
+        
+        let secondCoordinator = SecondCoordinator()
+        let controller = SecondController(coordinator: secondCoordinator)
+        controller.contentView = contentView
+        
+        secondCoordinator.start(from: appCoord, controller: controller)
+        secondCoordinator.remove()
+        XCTAssertNil(secondCoordinator.rootController?.contentView?.superview, "Coordinator content view not removed")
+    }
+    
+    func testThirdCoordinatorStart() {
+        guard let appCoord = appCoordinator else {
+            XCTFail("Coordinator doesn't exist")
+            return
+        }
+        
+        let thirdCoordinator = ThirdCoordinator()
+        let thirdModel = ThirdModel()
+        let controller = ThirdController(coordinator: thirdCoordinator, datasource: thirdModel)
+        controller.contentView = contentView
+        
+        thirdCoordinator.start(from: appCoord, controller: controller)
+        XCTAssertNotNil(thirdCoordinator.rootController, "Root controller not set")
+    }
+    
+    func testThirdCoordinatorRemove() {
+        guard let appCoord = appCoordinator else {
+            XCTFail("Coordinator doesn't exist")
+            return
+        }
+        
+        let thirdCoordinator = ThirdCoordinator()
+        let thirdModel = ThirdModel()
+        let controller = ThirdController(coordinator: thirdCoordinator, datasource: thirdModel)
+        controller.contentView = contentView
+        
+        thirdCoordinator.start(from: appCoord, controller: controller)
+        thirdCoordinator.remove()
+        XCTAssertNil(thirdCoordinator.rootController?.contentView?.superview, "Coordinator content view not removed")
     }
 
 }
