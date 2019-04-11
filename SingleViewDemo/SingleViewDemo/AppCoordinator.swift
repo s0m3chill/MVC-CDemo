@@ -39,7 +39,7 @@ class AppCoordinator: AppCoordinatorInterface {
     
     func pop(from: ModuleTypes) {
         guard let moduleToRemove = (viewModules.first { $0.type == from }) else {
-            fatalError("View modules stack error")
+            return
         }
         moduleToRemove.remove()
         

@@ -32,18 +32,17 @@ class AppCoordinatorTests: XCTestCase {
     
     // MARK: - Tests
     
-    func testPushTransition() {
+    func testPushTransitionToFirstModuleController() {
         guard let coordinator = appCoordinator else {
             XCTFail("App coordinator doesn't exist")
             return
         }
         
         coordinator.push(to: .first)
-        coordinator.push(to: .second)
-        XCTAssertTrue(coordinator.viewModules.count == 2, "Push failure")
+        XCTAssertTrue(coordinator.viewModules.count == 1, "Push failure")
     }
     
-    func testPopTransition() {
+    func testPopTransitionFromLastCoordinatorToSecondCoordinator() {
         guard let coordinator = appCoordinator else {
             XCTFail("App coordinator doesn't exist")
             return
@@ -54,6 +53,17 @@ class AppCoordinatorTests: XCTestCase {
         coordinator.push(to: .third)
         coordinator.pop(from: .third)
         XCTAssertTrue(coordinator.viewModules.count == 2, "Pop failure")
+    }
+    
+    func testPopFromNotExistingModule() {
+        guard let coordinator = appCoordinator else {
+            XCTFail("App coordinator doesn't exist")
+            return
+        }
+        
+        coordinator.push(to: .first)
+        coordinator.pop(from: .third)
+        XCTAssertTrue(coordinator.viewModules.count == 1, "Pop failure")
     }
 
 }
