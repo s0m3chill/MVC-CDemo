@@ -8,12 +8,18 @@
 
 import UIKit
 
-class SecondView: UIView {
+class SecondView: UIView, ModuleView {
     
     // MARK: - Properties
     
-    private let dataSource: SecondController
-    private let eventsHandler: SecondController
+    var backButton: UIButton? = {
+        let button = UIButton(type: .system)
+        button.setTitle("Back", for: .normal)
+        button.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
+        button.sizeToFit()
+        
+        return button
+    }()
     
     private var transitionButton: UIButton = {
         let button = UIButton(type: .system)
@@ -24,22 +30,19 @@ class SecondView: UIView {
         return button
     }()
     
-    private var backButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Back", for: .normal)
-        button.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
-        button.sizeToFit()
-        
-        return button
-    }()
+    private let dataSource: SecondController
+    private let eventsHandler: SecondController
     
     // MARK: - Initialization
     
-    init(dataSource: SecondController,
-         eventsHandler: SecondController,
-         frame: CGRect) {
-        self.dataSource = dataSource
-        self.eventsHandler = eventsHandler
+    required init(dataSource: ModuleController, eventsHandler: ModuleController, frame: CGRect) {
+        guard let secondDataSource = dataSource as? SecondController,
+              let secondEventsHandler = eventsHandler as? SecondController
+        else {
+            fatalError("Wrong datasource setup")
+        }
+        self.dataSource = secondDataSource
+        self.eventsHandler = secondEventsHandler
         
         super.init(frame: frame)
         
@@ -52,14 +55,16 @@ class SecondView: UIView {
     
     // MARK: - Setup
     
-    private func setupView() {
+    func setupView() {
         backgroundColor = .yellow
         
         addSubview(transitionButton)
         transitionButton.center = center
         
-        addSubview(backButton)
-        backButton.center = CGPoint(x: 50, y: 50)
+        if let existingBackButton = backButton {
+            addSubview(existingBackButton)
+            existingBackButton.center = CGPoint(x: 50, y: 50)
+        }
     }
     
     // MARK: - Actions

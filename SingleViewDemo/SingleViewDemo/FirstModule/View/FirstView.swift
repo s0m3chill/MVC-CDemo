@@ -8,12 +8,11 @@
 
 import UIKit
 
-class FirstView: UIView {
+class FirstView: UIView, ModuleView {
     
     // MARK: - Properties
     
-    private let dataSource: FirstController
-    private let eventsHandler: FirstController
+    var backButton: UIButton?
     
     private var transitionButton: UIButton = {
         let button = UIButton(type: .system)
@@ -23,14 +22,21 @@ class FirstView: UIView {
         
         return button
     }()
+    
+    private let dataSource: FirstController
+    private let eventsHandler: FirstController
 
     // MARK: - Initialization
     
-    init(dataSource: FirstController,
-         eventsHandler: FirstController,
-         frame: CGRect) {
-        self.dataSource = dataSource
-        self.eventsHandler = eventsHandler
+    required init(dataSource: ModuleController, eventsHandler: ModuleController, frame: CGRect) {
+        guard let firstDataSource = dataSource as? FirstController,
+              let firstEventsHandler = eventsHandler as? FirstController
+        else {
+            fatalError("Wrong datasource setup")
+        }
+        
+        self.dataSource = firstDataSource
+        self.eventsHandler = firstEventsHandler
         
         super.init(frame: frame)
         
@@ -43,7 +49,7 @@ class FirstView: UIView {
     
     // MARK: - Setup
     
-    private func setupView() {
+    func setupView() {
         backgroundColor = .green
         
         addSubview(transitionButton)

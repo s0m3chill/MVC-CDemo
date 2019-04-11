@@ -8,14 +8,11 @@
 
 import UIKit
 
-class ThirdView: UIView {
+class ThirdView: UIView, ModuleView {
     
     // MARK: - Properties
     
-    private let dataSource: ThirdController
-    private let eventsHandler: ThirdController
-    
-    private var backButton: UIButton = {
+    var backButton: UIButton? = {
         let button = UIButton(type: .system)
         button.setTitle("Back", for: .normal)
         button.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
@@ -30,13 +27,19 @@ class ThirdView: UIView {
         return imageView
     }()
     
+    private let dataSource: ThirdController
+    private let eventsHandler: ThirdController
+    
     // MARK: - Initialization
     
-    init(dataSource: ThirdController,
-         eventsHandler: ThirdController,
-         frame: CGRect) {
-        self.dataSource = dataSource
-        self.eventsHandler = eventsHandler
+    required init(dataSource: ModuleController, eventsHandler: ModuleController, frame: CGRect) {
+        guard let thirdDataSource = dataSource as? ThirdController,
+              let thirdEventsHandler = eventsHandler as? ThirdController
+        else {
+            fatalError("Wrong datasource setup")
+        }
+        self.dataSource = thirdDataSource
+        self.eventsHandler = thirdEventsHandler
         
         super.init(frame: frame)
         
@@ -49,11 +52,13 @@ class ThirdView: UIView {
     
     // MARK: - Setup
     
-    private func setupView() {
+    func setupView() {
         backgroundColor = .blue
         
-        addSubview(backButton)
-        backButton.center = CGPoint(x: 50, y: 50)
+        if let existingBackButton = backButton {
+            addSubview(existingBackButton)
+            existingBackButton.center = CGPoint(x: 50, y: 50)
+        }
         
         addSubview(contentImageView)
         let imageName = dataSource.imageName()

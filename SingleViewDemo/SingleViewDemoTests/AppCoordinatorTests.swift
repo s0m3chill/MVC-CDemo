@@ -9,7 +9,7 @@
 import XCTest
 @testable import SingleViewDemo
 
-class ContentCoordinatorTests: XCTestCase {
+class AppCoordinatorTests: XCTestCase {
     
     // MARK: - Properties
     
