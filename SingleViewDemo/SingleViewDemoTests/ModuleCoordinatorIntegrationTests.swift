@@ -59,7 +59,6 @@ class ModuleCoordinatorIntegrationTests: XCTestCase {
             return
         }
 
-        let controller = SecondController(coordinator: SecondCoordinator())
         moduleCoordinator.remove()
         
         switch moduleCoordinator.isCalled {
